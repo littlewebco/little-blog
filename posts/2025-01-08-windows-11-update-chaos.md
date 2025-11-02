@@ -26,16 +26,19 @@ In this article, we'll explore the most critical Windows 11 update issues, what'
 
 One of the most recent and frustrating issues is the **Task Manager duplication bug** introduced in the October 2025 preview update (KB5067036).
 
-**What's happening:**
+#### What's Happening
+
 - Closing Task Manager with the X button doesn't fully terminate the process
 - Multiple instances of `taskmgr.exe` continue running in the background
 - Each instance consumes system resources
 - Over time, this causes noticeable performance degradation
 
-**Why it's happening:**
+#### Why It's Happening
+
 This appears to be a process lifecycle management bug. When Task Manager is closed, Windows isn't properly cleaning up the process handle, leaving zombie processes running.
 
-**Workaround:**
+#### Workaround
+
 - Use "End Task" on the Task Manager process itself instead of closing with X
 - Or use Command Prompt: `taskkill.exe /im taskmgr.exe /f`
 
@@ -47,64 +50,80 @@ This appears to be a process lifecycle management bug. When Task Manager is clos
 
 Windows 11 24H2 users have been experiencing widespread update failures with error code **0x800F081F** (CBS_E_SOURCE_MISSING).
 
-**What's happening:**
+#### What's Happening
+
 - Cumulative updates fail to install
 - Missing language packs and feature payloads
 - Caused by Automatic Component Repair (ACR) and Manual Component Repair (MCR) cleanup processes
 
-**Why it's happening:**
+#### Why It's Happening
+
 Microsoft's component repair mechanisms are being too aggressive in cleaning up system components, removing files that are actually needed for future updates. This creates a dependency chain issue where updates can't proceed because required components are missing.
 
-**Resolution:**
+#### Resolution
+
 Microsoft fixed this in KB5067036 (October 2025), but affected users may need to perform an In-Place Upgrade to restore missing components.
 
-**Impact:** This isn't just an inconvenience - it leaves systems vulnerable to security flaws that patches are supposed to fix.
+#### Impact
+
+This isn't just an inconvenience - it leaves systems vulnerable to security flaws that patches are supposed to fix.
 
 ## IIS and Web Server Breakdowns
 
-**What's happening:**
+#### What's Happening
+
 - IIS websites fail to load after September 2025 updates
 - "Connection reset" errors
 - Issues with HTTP.sys affecting server-side applications
 - Websites hosted on localhost fail
 
-**Why it's happening:**
+#### Why It's Happening
+
 The update introduced changes to HTTP.sys (the HTTP protocol stack) that broke incoming connection handling. The issue is influenced by internet connectivity and timing of updates, making it inconsistent across environments.
 
-**Resolution:**
+#### Resolution
+
 Fixed in KB5067036, but IT administrators had to use Known Issue Rollback (KIR) or Group Policy workarounds in the meantime.
 
-**Impact:** This hit enterprise environments hard, breaking internal web services and development environments.
+#### Impact
+
+This hit enterprise environments hard, breaking internal web services and development environments.
 
 ## Authentication Nightmares
 
 ### Smartcard Authentication Failures
 
-**What's happening:**
+#### What's Happening
+
 - Smart card authentication fails after October 2025 updates
 - Certificate operations break
 - Applications can't sign documents
 - Error messages: "invalid provider type specified" and "CryptAcquireCertificatePrivateKey error"
 
-**Why it's happening:**
+#### Why It's Happening
+
 Microsoft introduced security improvements for CVE-2024-30098 that require RSA-based smart card certificates to use KSP (Key Storage Provider) instead of CSP (Cryptographic Service Provider). This is a breaking change that affects legacy authentication systems.
 
 **The problem:** Enterprise environments rely heavily on smartcard authentication. This change broke authentication for countless organizations without proper migration guidance.
 
-**Workaround:**
+#### Workaround
+
 IT administrators can temporarily disable the enforcement via registry key, but this workaround will be removed in April 2026 updates, forcing migration.
 
 ### USB Devices in Recovery Environment
 
-**What's happening:**
+#### What's Happening
+
 - USB keyboards and mice stop working in Windows Recovery Environment (WinRE)
 - Only affects WinRE, not the main OS
 - Prevents navigation of recovery options
 
-**Why it's happening:**
+#### Why It's Happening
+
 The October 2025 security update (KB5066835) broke USB driver support specifically in the recovery environment. This is particularly problematic because users need USB devices to navigate recovery options when their system won't boot normally.
 
-**Resolution:**
+#### Resolution
+
 Fixed in out-of-band update KB5070773, but users had to use touchscreen, PS/2 devices, or USB recovery drives as workarounds.
 
 ## Why These Issues Keep Happening
