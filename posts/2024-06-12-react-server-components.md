@@ -1,17 +1,12 @@
 ---
-title: React Server Components - The Future of React Development?
-date: 2024-06-12
-author: Little Web Co Team
-tags:
-  - react
-  - server components
-  - next.js
-  - frontend
-excerpt: React Server Components represent a fundamental shift in how React applications are built. Learn what they are, how they work, and whether they're right for your project.
+title: "React Server Components - The Future of React Development?"
+date: "2025-06-12"
+author: "Little Web Co Team"
+tags: 0
+excerpt: "React Server Components represent a fundamental shift in how React applications are built. Learn what they are, how they work, and whether they're right for your project."
 draft: false
-feature_image: https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80
+feature_image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80"
 ---
-
 # React Server Components - The Future of React Development?
 
 ![React Server Components](https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80)
@@ -32,11 +27,11 @@ React Server Components allow you to build components that run exclusively on th
 ### How They Differ from SSR
 
 Traditional Server-Side Rendering (SSR):
-- Components render on server → HTML sent to client → Hydrated on client
+- Components render on server â HTML sent to client â Hydrated on client
 - JavaScript bundle still needs to be downloaded
 
 Server Components:
-- Components run on server → Serialized and sent to client → No hydration needed
+- Components run on server â Serialized and sent to client â No hydration needed
 - No JavaScript bundle for Server Components
 
 ## Benefits of Server Components
@@ -99,17 +94,17 @@ One Angular creator even said: *"React Server Components will destroy React."*
 
 ### Good Use Cases
 
-✅ **Data fetching** - Components that fetch and display data
-✅ **Static content** - Content that doesn't change frequently
-✅ **Heavy computations** - Work that's better done on server
-✅ **Large dependencies** - Libraries that would bloat the bundle
+â **Data fetching** - Components that fetch and display data
+â **Static content** - Content that doesn't change frequently
+â **Heavy computations** - Work that's better done on server
+â **Large dependencies** - Libraries that would bloat the bundle
 
 ### When to Avoid
 
-❌ **Interactive components** - Need event handlers
-❌ **Browser APIs** - Window, document, localStorage
-❌ **Real-time updates** - WebSockets, subscriptions
-❌ **State management** - Components that need useState, useEffect
+â **Interactive components** - Need event handlers
+â **Browser APIs** - Window, document, localStorage
+â **Real-time updates** - WebSockets, subscriptions
+â **State management** - Components that need useState, useEffect
 
 ## Real-World Example
 
@@ -143,7 +138,7 @@ function LikeButton({ postId }) {
   const [liked, setLiked] = useState(false);
   return (
     <button onClick={() => setLiked(!liked)}>
-      {liked ? '❤️' : '🤍'}
+      {liked ? 'â¤ï¸' : 'ð¤'}
     </button>
   );
 }
