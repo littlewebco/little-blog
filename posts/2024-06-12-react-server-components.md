@@ -9,6 +9,7 @@ tags:
   - frontend
 excerpt: React Server Components represent a fundamental shift in how React applications are built. Learn what they are, how they work, and whether they're right for your project.
 draft: false
+feature_image: https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80
 ---
 
 # React Server Components - The Future of React Development?

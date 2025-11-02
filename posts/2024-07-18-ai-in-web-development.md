@@ -9,6 +9,7 @@ tags:
   - automation
 excerpt: AI is transforming web development in 2024. From code generation to automated testing, discover how AI tools are changing the way we build web applications.
 draft: false
+feature_image: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80
 ---
 
 # The Rise of AI in Web Development - Tools and Trends for 2024

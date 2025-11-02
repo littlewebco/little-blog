@@ -9,6 +9,7 @@ tags:
   - performance
 excerpt: Discover the essential best practices for building modern web applications in 2024, from performance optimization to security considerations and developer experience.
 draft: false
+feature_image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80
 ---
 
 # Building Modern Web Applications - A Developer's Guide to 2024 Best Practices

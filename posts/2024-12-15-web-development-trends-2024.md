@@ -9,6 +9,7 @@ tags:
   - javascript
 excerpt: Discover how 2024 marked a shift back to simpler web development approaches, with frameworks like Astro and Eleventy gaining popularity as developers seek alternatives to React complexity.
 draft: false
+feature_image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80
 ---
 
 # Web Development Trends in 2024 - A Return to Simplicity

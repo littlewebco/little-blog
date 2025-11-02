@@ -39,6 +39,7 @@ Example: `2025-01-15-welcome.md`
   ```
 - `excerpt` (string) - Short description for previews and meta descriptions
 - `draft` (boolean) - Set to `true` to mark posts as drafts (filtered out in production)
+- `feature_image` (string) - URL to the featured image for the post (used in previews and social sharing)
 
 ### Example Post
 
@@ -52,6 +53,7 @@ tags:
   - getting-started
 excerpt: This is my first blog post about getting started.
 draft: false
+feature_image: https://example.com/image.jpg
 ---
 
 # My First Blog Post
